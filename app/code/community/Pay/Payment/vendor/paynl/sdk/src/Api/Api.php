@@ -84,6 +84,19 @@ class Api
         $curl->setOpt(CURLOPT_SSL_VERIFYPEER, Config::getVerifyPeer());
 
         $result = $curl->post($uri, $data);
+        
+        if(Mage::getStoreConfigFlag('pay_payment/debug/verbose_logging')) {
+            $msg = str_repeat("=", 150).PHP_EOL.PHP_EOL
+                ."DATE: ".date("c").PHP_EOL.PHP_EOL
+                ."ENDPOINT: ".var_export($endpoint, true).PHP_EOL.PHP_EOL
+                ."VERSION: ".var_export($version, true).PHP_EOL.PHP_EOL
+                ."DATA:".PHP_EOL.var_export($data, true).PHP_EOL.PHP_EOL
+                ."URI: ".var_export($uri, true).PHP_EOL.PHP_EOL
+                ."CURL: ".var_export($curl, true).PHP_EOL.PHP_EOL
+                ."RESULT:".PHP_EOL.var_export($result, true).PHP_EOL;
+        
+            file_put_contents("./var/log/verbose-paynl.txt", $msg, FILE_APPEND | LOCK_EX);
+        }
 
         if (isset($result->status) && $result->status === 'FALSE') {
             throw new Error\Api($result->error);
