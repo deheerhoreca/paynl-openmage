@@ -1066,6 +1066,7 @@
                 <ask_data_business>0</ask_data_business>
                 <limit_shipping>0</limit_shipping>
             </pay_payment_beautyandmore>
+>>>>>>> e927856 (Add Beauty and More)
             <pay_payment_biller>
                 <active>0</active>
                 <invoice_email>1</invoice_email>
