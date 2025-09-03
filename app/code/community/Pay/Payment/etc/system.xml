@@ -3200,10 +3200,10 @@
                         </instructions>
                     </fields>
                 </pay_payment_applepay>
-                <pay_payment_babycadeaubon type="group" translate="label" module="pay_payment">
-                    <label>Babycadeaubon</label>
-                    <model>pay_payment/Model_Paymentmethod_Babycadeaubon</model>
-                    <sort_order>1220</sort_order>
+                <pay_payment_beautyandmore type="group" translate="label" module="pay_payment">
+                    <label>Beauty and more</label>
+                    <model>pay_payment/Model_Paymentmethod_Beautyandmore</model>
+                    <sort_order>1225</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
@@ -3216,8 +3216,8 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <frontend_type>select</frontend_type>
-                            <source_model>pay_payment/source_paymentmethod_babycadeaubon_active</source_model>
-                            <config_path>payment/pay_payment_babycadeaubon/active</config_path>
+                            <source_model>pay_payment/source_paymentmethod_beautyandmore_active</source_model>
+                            <config_path>payment/pay_payment_beautyandmore/active</config_path>
                         </active>
                         <title translate="label">
                             <depends>
@@ -3229,7 +3229,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/title</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/title</config_path>
                         </title>
                         <sort_order translate="label">
                             <depends>
@@ -3241,7 +3241,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/sort_order</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/sort_order</config_path>
                         </sort_order>
                         <min_order_total translate="label comment">
                             <depends>
@@ -3254,7 +3254,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/min_order_total</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/min_order_total</config_path>
                         </min_order_total>
                         <max_order_total translate="label comment">
                             <depends>
@@ -3267,7 +3267,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/max_order_total</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/max_order_total</config_path>
                         </max_order_total>
                         <allowspecific translate="label">
                             <depends>
@@ -3281,7 +3281,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/allowspecific</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/allowspecific</config_path>
                         </allowspecific>
                         <specificcountry translate="label">
                             <depends>
@@ -3296,7 +3296,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <comment>Selecteer de landen waarvoor deze betaalmethode beschikbaar is</comment>
-                            <config_path>payment/pay_payment_babycadeaubon/specificcountry</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/specificcountry</config_path>
                         </specificcountry>
                         <limit_currency translate="label comment">
                             <depends>
@@ -3310,7 +3310,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/limit_currency</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/limit_currency</config_path>
                         </limit_currency>
                         <specificcurrency translate="label comment">
                             <depends>
@@ -3325,7 +3325,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <comment>Selecteer de valutas waarvoor deze betaalmethode beschikbaar is</comment>
-                            <config_path>payment/pay_payment_babycadeaubon/specificcurrency</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/specificcurrency</config_path>
                         </specificcurrency>
                         <limit_shipping translate="label comment">
                             <depends>
@@ -3339,7 +3339,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/limit_shipping</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/limit_shipping</config_path>
                         </limit_shipping>
                         <disabled_shippingmethods translate="label comment">
                             <depends>
@@ -3354,7 +3354,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/disabled_shippingmethods</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/disabled_shippingmethods</config_path>
                         </disabled_shippingmethods>
                         <order_status translate="label">
                             <depends>
@@ -3368,7 +3368,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/order_status</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/order_status</config_path>
                         </order_status>
                         <order_status_success translate="label">
                             <depends>
@@ -3382,7 +3382,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/order_status_success</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/order_status_success</config_path>
                         </order_status_success>
                         <order_status_verify translate="label comment">
                             <depends>
@@ -3396,7 +3396,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/order_status_verify</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/order_status_verify</config_path>
                         </order_status_verify>
                         <order_status_authorized translate="label comment">
                             <depends>
@@ -3410,7 +3410,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/order_status_authorized</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/order_status_authorized</config_path>
                         </order_status_authorized>
                         <charge_type translate="label">
                             <depends>
@@ -3425,7 +3425,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/charge_type</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/charge_type</config_path>
                         </charge_type>
                         <charge_value translate="label">
                             <depends>
@@ -3438,7 +3438,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/charge_value</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/charge_value</config_path>
                         </charge_value>
                         <charge_tax_class translate="label">
                             <depends>
@@ -3451,7 +3451,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/charge_tax_class</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/charge_tax_class</config_path>
                         </charge_tax_class>
                         <send_mail translate="label">
                             <depends>
@@ -3465,7 +3465,7 @@
                             <show_in_store>1</show_in_store>
                             <frontend_type>select</frontend_type>
                             <source_model>pay_payment/source_sendmail</source_model>
-                            <config_path>payment/pay_payment_babycadeaubon/send_mail</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/send_mail</config_path>
                         </send_mail>
                         <invoice_email translate="label comment">
                             <depends>
@@ -3479,7 +3479,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/invoice_email</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/invoice_email</config_path>
                         </invoice_email>
                         <instructions translate="label comment">
                             <depends>
@@ -3492,10 +3492,10 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_babycadeaubon/instructions</config_path>
+                            <config_path>payment/pay_payment_beautyandmore/instructions</config_path>
                         </instructions>
                     </fields>
-                </pay_payment_babycadeaubon>
+                </pay_payment_beautyandmore>
                 <pay_payment_biller type="group" translate="label" module="pay_payment">
                     <label>Biller</label>
                     <model>pay_payment/Model_Paymentmethod_Biller</model>
