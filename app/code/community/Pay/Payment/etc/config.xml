@@ -611,7 +611,7 @@
                 <active>0</active>
                 <invoice_email>1</invoice_email>
                 <model>pay_payment/Paymentmethod_Sofortbanking</model>
-                <title>Sofort (via Klarna)</title>
+                <title>Sofortbanking</title>
                 <payment_action>authorize</payment_action>
                 <order_status>pending_payment</order_status>
                 <order_status_success>processing</order_status_success>
@@ -619,6 +619,18 @@
                 <send_mail>success</send_mail>
                 <limit_shipping>0</limit_shipping>
             </pay_payment_sofortbanking>
+            <pay_payment_sofortbyklarna>
+                <active>0</active>
+                <invoice_email>1</invoice_email>
+                <model>pay_payment/Paymentmethod_Sofortbyklarna</model>
+                <title>Sofort (by Klarna)</title>
+                <payment_action>authorize</payment_action>
+                <order_status>pending_payment</order_status>
+                <order_status_success>processing</order_status_success>
+                <order_status_verify>pending_payment</order_status_verify>
+                <send_mail>success</send_mail>
+                <limit_shipping>0</limit_shipping>
+            </pay_payment_sofortbyklarna>
             <pay_payment_sportsgiftcard>
                 <active>0</active>
                 <invoice_email>1</invoice_email>
