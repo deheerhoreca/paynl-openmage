@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Pay_Payment>
-            <version>3.19.0</version>
+            <version>3.20.0</version>
         </Pay_Payment>
     </modules>
     <global>
@@ -301,6 +301,18 @@
                 <send_mail>success</send_mail>
                 <limit_shipping>0</limit_shipping>
             </pay_payment_bitcoin>
+            <pay_payment_boekencadeau>
+                <active>0</active>
+                <invoice_email>1</invoice_email>
+                <model>pay_payment/Paymentmethod_Boekencadeau</model>
+                <title>Boeken cadeau</title>
+                <payment_action>authorize</payment_action>
+                <order_status>pending_payment</order_status>
+                <order_status_success>processing</order_status_success>
+                <order_status_verify>pending_payment</order_status_verify>
+                <send_mail>success</send_mail>
+                <limit_shipping>0</limit_shipping>
+            </pay_payment_boekencadeau>
             <pay_payment_capayable>
                 <active>0</active>
                 <invoice_email>1</invoice_email>
@@ -377,6 +389,18 @@
                 <send_mail>success</send_mail>
                 <limit_shipping>0</limit_shipping>
             </pay_payment_fashioncheque>
+            <pay_payment_fashionchequebeauty>
+                <active>0</active>
+                <invoice_email>1</invoice_email>
+                <model>pay_payment/Paymentmethod_Fashionchequebeauty</model>
+                <title>Fashioncheque beauty</title>
+                <payment_action>authorize</payment_action>
+                <order_status>pending_payment</order_status>
+                <order_status_success>processing</order_status_success>
+                <order_status_verify>pending_payment</order_status_verify>
+                <send_mail>success</send_mail>
+                <limit_shipping>0</limit_shipping>
+            </pay_payment_fashionchequebeauty>
             <pay_payment_fashiongiftcard>
                 <active>0</active>
                 <invoice_email>1</invoice_email>
@@ -511,6 +535,18 @@
                 <send_mail>success</send_mail>
                 <limit_shipping>0</limit_shipping>
             </pay_payment_kunstencultuurkaart>
+            <pay_payment_leescadeau>
+                <active>0</active>
+                <invoice_email>1</invoice_email>
+                <model>pay_payment/Paymentmethod_Leescadeau</model>
+                <title>Lees cadeau</title>
+                <payment_action>authorize</payment_action>
+                <order_status>pending_payment</order_status>
+                <order_status_success>processing</order_status_success>
+                <order_status_verify>pending_payment</order_status_verify>
+                <send_mail>success</send_mail>
+                <limit_shipping>0</limit_shipping>
+            </pay_payment_leescadeau>
             <pay_payment_payconiq>
                 <active>0</active>
                 <invoice_email>1</invoice_email>
@@ -583,6 +619,30 @@
                 <send_mail>success</send_mail>
                 <limit_shipping>0</limit_shipping>
             </pay_payment_sofortbanking>
+            <pay_payment_sofortbyklarna>
+                <active>0</active>
+                <invoice_email>1</invoice_email>
+                <model>pay_payment/Paymentmethod_Sofortbyklarna</model>
+                <title>Sofort (by Klarna)</title>
+                <payment_action>authorize</payment_action>
+                <order_status>pending_payment</order_status>
+                <order_status_success>processing</order_status_success>
+                <order_status_verify>pending_payment</order_status_verify>
+                <send_mail>success</send_mail>
+                <limit_shipping>0</limit_shipping>
+            </pay_payment_sofortbyklarna>
+            <pay_payment_sportsgiftcard>
+                <active>0</active>
+                <invoice_email>1</invoice_email>
+                <model>pay_payment/Paymentmethod_Sportsgiftcard</model>
+                <title>Sports giftcard</title>
+                <payment_action>authorize</payment_action>
+                <order_status>pending_payment</order_status>
+                <order_status_success>processing</order_status_success>
+                <order_status_verify>pending_payment</order_status_verify>
+                <send_mail>success</send_mail>
+                <limit_shipping>0</limit_shipping>
+            </pay_payment_sportsgiftcard>
             <pay_payment_spraypay>
                 <active>0</active>
                 <invoice_email>1</invoice_email>
@@ -825,6 +885,18 @@
                 <send_mail>success</send_mail>
                 <limit_shipping>0</limit_shipping>
             </pay_payment_rotterdamcitycard>
+            <pay_payment_scholierenpas>
+                <active>0</active>
+                <invoice_email>1</invoice_email>
+                <model>pay_payment/Paymentmethod_Scholierenpas</model>
+                <title>Scholierenpas</title>
+                <payment_action>authorize</payment_action>
+                <order_status>pending_payment</order_status>
+                <order_status_success>processing</order_status_success>
+                <order_status_verify>pending_payment</order_status_verify>
+                <send_mail>success</send_mail>
+                <limit_shipping>0</limit_shipping>
+            </pay_payment_scholierenpas>
             <pay_payment_billink>
                 <active>0</active>
                 <invoice_email>1</invoice_email>
@@ -930,6 +1002,20 @@
                 <ask_data_business>0</ask_data_business>
                 <limit_shipping>0</limit_shipping>
             </pay_payment_applepay>
+            <pay_payment_babycadeaubon>
+                <active>0</active>
+                <invoice_email>1</invoice_email>
+                <model>pay_payment/Paymentmethod_Babycadeaubon</model>
+                <title>Babycadeaubon</title>
+                <payment_action>authorize</payment_action>
+                <order_status>pending_payment</order_status>
+                <order_status_success>processing</order_status_success>
+                <order_status_verify>pending_payment</order_status_verify>
+                <send_mail>success</send_mail>
+                <ask_data_personal>0</ask_data_personal>
+                <ask_data_business>0</ask_data_business>
+                <limit_shipping>0</limit_shipping>
+            </pay_payment_babycadeaubon>
             <pay_payment_beautyandmore>
                 <active>0</active>
                 <invoice_email>1</invoice_email>
