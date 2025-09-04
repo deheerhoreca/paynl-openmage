@@ -17463,7 +17463,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <config_path>payment/pay_payment_sofortbayklarnaorder_status_verify</config_path>
+                            <config_path>payment/pay_payment_sofortbyklarna/order_status_verify</config_path>
                         </order_status_verify>
                         <order_status_authorized translate="label comment">
                             <depends>
