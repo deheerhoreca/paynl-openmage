@@ -17860,7 +17860,7 @@
                     </fields>
                 </pay_payment_scholierenpas>
                 <pay_payment_sofortbanking type="group" translate="label" module="pay_payment">
-                    <label>Sofort (by Klarna)</label>
+                    <label>Sofortbanking</label>
                     <model>pay_payment/Model_Paymentmethod_Sofortbanking</model>
                     <sort_order>3690</sort_order>
                     <show_in_default>1</show_in_default>
