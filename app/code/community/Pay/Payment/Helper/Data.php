@@ -412,6 +412,7 @@ class Pay_Payment_Helper_Data extends Mage_Core_Helper_Abstract
                 3192,
                 2856,
                 2907,
+                2970,
                 3552,
                 3258,
                 3609,

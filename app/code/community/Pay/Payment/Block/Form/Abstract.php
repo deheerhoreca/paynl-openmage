@@ -51,6 +51,7 @@ class Pay_Payment_Block_Form_Abstract extends Mage_Payment_Block_Form
             3192,
             2856,
             2907,
+            2970,
             3552,
             3258,
             3609,
