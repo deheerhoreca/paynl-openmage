@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Pay_Payment>
-            <version>3.20.0</version>
+            <version>3.21.0</version>
         </Pay_Payment>
     </modules>
     <global>
@@ -313,6 +313,18 @@
                 <send_mail>success</send_mail>
                 <limit_shipping>0</limit_shipping>
             </pay_payment_boekencadeau>
+            <pay_payment_brite>
+                <active>0</active>
+                <invoice_email>1</invoice_email>
+                <model>pay_payment/Paymentmethod_Brite</model>
+                <title>Brite</title>
+                <payment_action>authorize</payment_action>
+                <order_status>pending_payment</order_status>
+                <order_status_success>processing</order_status_success>
+                <order_status_verify>pending_payment</order_status_verify>
+                <send_mail>success</send_mail>
+                <limit_shipping>0</limit_shipping>
+            </pay_payment_brite>
             <pay_payment_capayable>
                 <active>0</active>
                 <invoice_email>1</invoice_email>
@@ -437,6 +449,18 @@
                 <send_mail>success</send_mail>
                 <limit_shipping>0</limit_shipping>
             </pay_payment_gezondheidsbon>
+            <pay_payment_giftforgood>
+                <active>0</active>
+                <invoice_email>1</invoice_email>
+                <model>pay_payment/Paymentmethod_Giftforgood</model>
+                <title>Gift for Good</title>
+                <payment_action>authorize</payment_action>
+                <order_status>pending_payment</order_status>
+                <order_status_success>processing</order_status_success>
+                <order_status_verify>pending_payment</order_status_verify>
+                <send_mail>success</send_mail>
+                <limit_shipping>0</limit_shipping>
+            </pay_payment_giftforgood>
             <pay_payment_podiumkadokaart>
                 <active>0</active>
                 <invoice_email>1</invoice_email>
