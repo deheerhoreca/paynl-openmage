@@ -85,7 +85,7 @@ class Api
 
         $result = $curl->post($uri, $data);
         
-        if(Mage::getStoreConfigFlag('pay_payment/debug/verbose_logging')) {
+        if(\Mage::getStoreConfigFlag('pay_payment/debug/verbose_logging')) {
             $msg = str_repeat("=", 150).PHP_EOL.PHP_EOL
                 ."DATE: ".date("c").PHP_EOL.PHP_EOL
                 ."ENDPOINT: ".var_export($endpoint, true).PHP_EOL.PHP_EOL
