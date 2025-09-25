@@ -1038,8 +1038,7 @@
                 <ask_data_business>0</ask_data_business>
                 <limit_shipping>0</limit_shipping>
             </pay_payment_applepay>
-<<<<<<< HEAD
-            <pay_payment_babycadeaubony>
+            <pay_payment_babycadeaubon>
                 <active>0</active>
                 <invoice_email>1</invoice_email>
                 <model>pay_payment/Paymentmethod_Babycadeaubon</model>
@@ -1052,9 +1051,7 @@
                 <ask_data_personal>0</ask_data_personal>
                 <ask_data_business>0</ask_data_business>
                 <limit_shipping>0</limit_shipping>
-            </pay_payment_babycadeaubony>
-||||||| parent of e927856 (Add Beauty and More)
-=======
+            </pay_payment_babycadeaubon>
             <pay_payment_beautyandmore>
                 <active>0</active>
                 <invoice_email>1</invoice_email>
@@ -1069,7 +1066,6 @@
                 <ask_data_business>0</ask_data_business>
                 <limit_shipping>0</limit_shipping>
             </pay_payment_beautyandmore>
->>>>>>> e927856 (Add Beauty and More)
             <pay_payment_biller>
                 <active>0</active>
                 <invoice_email>1</invoice_email>
