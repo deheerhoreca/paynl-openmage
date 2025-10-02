@@ -37,7 +37,7 @@ class Pay_Payment_OrderController extends Mage_Core_Controller_Front_Action
         $pageCanceled = $store->getConfig('pay_payment/general/page_canceled');
 
 	    /**
-	     * @var $orderPayment Mage_Sales_Model_Order_Payment
+	     * @var Mage_Sales_Model_Order_Payment
 	     */
 	    $orderPayment = $order->getPayment();
 	    $hash = $orderPayment->getAdditionalInformation( 'paynl_hash');
@@ -61,7 +61,7 @@ class Pay_Payment_OrderController extends Mage_Core_Controller_Front_Action
 	    $quoteId = $order->getQuoteId();
 
 	    /**
-	     * @var $quote Mage_Sales_Model_Quote
+	     * @var Mage_Sales_Model_Quote
 	     */
 	    $quote = $quoteModel->load($quoteId);
 
@@ -117,10 +117,16 @@ class Pay_Payment_OrderController extends Mage_Core_Controller_Front_Action
         try {
 
             if ($params['action'] == 'pending') {
-                throw Mage::exception('Pay_Payment', 'Ignoring pending', 0);
+                // throw Mage::exception('Pay_Payment', 'Ignoring pending', 0);
+                echo "TRUE| Ignoring pending";
+                Mage::log("{$transactionId} Pay.nl order exchange PENDING: Ignoring pending. Params: {$_SERVER['QUERY_STRING']}", Zend_Log::DEBUG, "paynl.log");
+                die();
             }
             if (substr($params['action'],0,6) == 'refund') {
-                throw Mage::exception('Pay_Payment', 'Ignoring refund', 0);
+                // throw Mage::exception('Pay_Payment', 'Ignoring refund', 0);
+                echo "TRUE| Ignoring refund";
+                Mage::log("{$transactionId} Pay.nl order exchange REFUND: Ignoring refund. Params: {$_SERVER['QUERY_STRING']}", Zend_Log::DEBUG, "paynl.log");
+                die();
             }
 
             $this->helperData->lockTransaction($transactionId);
