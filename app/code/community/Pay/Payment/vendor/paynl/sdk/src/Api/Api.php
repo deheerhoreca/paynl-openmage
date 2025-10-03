@@ -1,20 +1,4 @@
 <?php
-/*
- * Copyright (C) 2015 Andy Pieters <andy@andypieters.nl>
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
 
 namespace Paynl\Api;
 
@@ -26,7 +10,7 @@ use Paynl\Helper;
 /**
  * Description of Api
  *
- * @author Andy Pieters <andy@andypieters.nl>
+ * @author Andy Pieters <andy@pay.nl>
  */
 class Api
 {
@@ -57,13 +41,14 @@ class Api
      *
      * @throws Error\Api
      * @throws Error\Error
+     * @throws Error\Required\ApiToken
      */
     public function doRequest($endpoint, $version = null)
     {
         if ($version === null) {
             $version = $this->version;
         }
-
+      
         $auth = $this->getAuth();
         $data = $this->getData();
         $uri = Config::getApiUrl($endpoint, (int) $version);
@@ -78,41 +63,26 @@ class Api
 
         if (!empty($auth)) {
             $curl->setBasicAuthentication($auth['username'], $auth['password']);
-        }
-
-
+        }      
+        
         $curl->setOpt(CURLOPT_SSL_VERIFYPEER, Config::getVerifyPeer());
 
         $result = $curl->post($uri, $data);
-        
-        if(\Mage::getStoreConfigFlag('pay_payment/debug/verbose_logging')) {
-            $msg = str_repeat("=", 150).PHP_EOL.PHP_EOL
-                ."DATE: ".date("c").PHP_EOL.PHP_EOL
-                ."ENDPOINT: ".var_export($endpoint, true).PHP_EOL.PHP_EOL
-                ."VERSION: ".var_export($version, true).PHP_EOL.PHP_EOL
-                ."DATA:".PHP_EOL.var_export($data, true).PHP_EOL.PHP_EOL
-                ."URI: ".var_export($uri, true).PHP_EOL.PHP_EOL
-                ."CURL: ".var_export($curl, true).PHP_EOL.PHP_EOL
-                ."RESULT:".PHP_EOL.var_export($result, true).PHP_EOL;
-        
-            file_put_contents("./var/log/verbose-paynl.txt", $msg, FILE_APPEND | LOCK_EX);
-        }
 
         if (isset($result->status) && $result->status === 'FALSE') {
             throw new Error\Api($result->error);
-        }
+        }      
 
         if ($curl->error) {
             throw new Error\Error($curl->errorMessage);
         }
-
+        
         return $this->processResult($result);
     }
 
     /**
      * @return array
-     * @throws Error\Required\ApiToken
-     * @throws Error\Required\ServiceId
+     * @throws Error\Required
      */
     protected function getData()
     {
@@ -126,8 +96,9 @@ class Api
 
     /**
      * @return array|null
+     * @throws Error\Required\ApiToken
      */
-    private function getAuth()
+    protected function getAuth()
     {
         if (!$this->isApiTokenRequired()) {
             return null;
