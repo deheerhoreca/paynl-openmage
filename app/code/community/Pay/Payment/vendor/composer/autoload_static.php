@@ -7,22 +7,22 @@ namespace Composer\Autoload;
 class ComposerStaticInitea3453e1b724e71ac1e1487d7036efba
 {
     public static $prefixLengthsPsr4 = array (
-        'P' => 
+        'P' =>
         array (
             'Paynl\\' => 6,
         ),
-        'C' => 
+        'C' =>
         array (
             'Curl\\' => 5,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Paynl\\' => 
+        'Paynl\\' =>
         array (
             0 => __DIR__ . '/..' . '/paynl/sdk/src',
         ),
-        'Curl\\' => 
+        'Curl\\' =>
         array (
             0 => __DIR__ . '/..' . '/php-curl-class/php-curl-class/src/Curl',
         ),
