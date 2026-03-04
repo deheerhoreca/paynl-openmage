@@ -41,9 +41,6 @@ class Pay_Payment_Block_Form_Abstract extends Mage_Payment_Block_Form
             ->setIconSizeWidth('')
             ->setIconSizeHeight('');
 
-<<<<<<< HEAD
-        $differentIconArray = array(1813, 3144, 3183, 3192, 2856, 2907, 3552, 3258, 3609, 3597, 3603, 3558, 3633, 3615, 4173);
-||||||| parent of 1fa9ea8 (Add Brite and Gift for Good)
         $differentIconArray = array(
             1813,
             3144,
@@ -51,31 +48,7 @@ class Pay_Payment_Block_Form_Abstract extends Mage_Payment_Block_Form
             3192,
             2856,
             2907,
-            3552,
-            3258,
-            3609,
-            3597,
-            3603,
-            3558,
-            3633,
-            3615,
-            4422,
-            4434,
-            4416,
-            4428,
-            4749,
-            4758,
-            4761,
-            4173
-        );
-=======
-        $differentIconArray = array(
-            1813,
-            3144,
-            3183,
-            3192,
-            2856,
-            2907,
+            2970,
             3552,
             3258,
             3609,
@@ -95,7 +68,6 @@ class Pay_Payment_Block_Form_Abstract extends Mage_Payment_Block_Form
             4287,
             4773
         );
->>>>>>> 1fa9ea8 (Add Brite and Gift for Good)
 
         if (in_array($this->paymentMethodId, $differentIconArray)) {
             $iconSize = explode("x", $iconSize);
