@@ -1202,6 +1202,54 @@
                 <send_mail>success</send_mail>
                 <limit_shipping>0</limit_shipping>
             </pay_payment_eps>
+            <pay_payment_pix>
+                <active>0</active>
+                <invoice_email>1</invoice_email>
+                <model>pay_payment/Paymentmethod_Pix</model>
+                <title>PIX</title>
+                <payment_action>authorize</payment_action>
+                <order_status>pending_payment</order_status>
+                <order_status_success>processing</order_status_success>
+                <order_status_verify>pending_payment</order_status_verify>
+                <send_mail>success</send_mail>
+                <limit_shipping>0</limit_shipping>
+            </pay_payment_pix>
+            <pay_payment_floa>
+                <active>0</active>
+                <invoice_email>1</invoice_email>
+                <model>pay_payment/Paymentmethod_Floa</model>
+                <title>FLOA</title>
+                <payment_action>authorize</payment_action>
+                <order_status>pending_payment</order_status>
+                <order_status_success>processing</order_status_success>
+                <order_status_verify>pending_payment</order_status_verify>
+                <send_mail>success</send_mail>
+                <limit_shipping>0</limit_shipping>
+            </pay_payment_floa>
+            <pay_payment_bancomat>
+                <active>0</active>
+                <invoice_email>1</invoice_email>
+                <model>pay_payment/Paymentmethod_Bancomat</model>
+                <title>Bancomat</title>
+                <payment_action>authorize</payment_action>
+                <order_status>pending_payment</order_status>
+                <order_status_success>processing</order_status_success>
+                <order_status_verify>pending_payment</order_status_verify>
+                <send_mail>success</send_mail>
+                <limit_shipping>0</limit_shipping>
+            </pay_payment_bancomat>
+            <pay_payment_stadspaspurmerend>
+                <active>0</active>
+                <invoice_email>1</invoice_email>
+                <model>pay_payment/Paymentmethod_Stadspaspurmerend</model>
+                <title>Stadspas Purmerend</title>
+                <payment_action>authorize</payment_action>
+                <order_status>pending_payment</order_status>
+                <order_status_success>processing</order_status_success>
+                <order_status_verify>pending_payment</order_status_verify>
+                <send_mail>success</send_mail>
+                <limit_shipping>0</limit_shipping>
+            </pay_payment_stadspaspurmerend>
         </payment>
     </default>
 </config>
