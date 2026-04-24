@@ -128,7 +128,9 @@ class Pay_Payment_Helper_Order extends Mage_Core_Helper_Abstract
                 $order->addStatusHistoryComment('Stopped processing the order, already processed');
             }
             $order->save();
-            throw Mage::exception('Pay_Payment', 'Already processed', 0);
+            // throw Mage::exception('Pay_Payment', 'Already processed', 0);
+            Mage::log("{$transactionId} Pay.nl order exchange: Already processed.", Zend_Log::NOTICE, "paynl.log");
+            return;
         }
         $autoInvoice      = $store->getConfig('pay_payment/general/auto_invoice');
         $neverCancel      = $store->getConfig('pay_payment/general/never_cancel');
