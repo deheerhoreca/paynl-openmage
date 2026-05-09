@@ -255,6 +255,11 @@ class Pay_Payment_Helper_Data extends Mage_Core_Helper_Abstract
     public function lockTransaction($transactionId)
     {
         $transaction = $this->getTransaction($transactionId);
+
+        if ($transaction->isEmpty()) {
+            throw Mage::exception('Pay_Payment', 'No local transaction record found for: ' . $transactionId, 0);
+        }
+
         $now = strtotime('now');
         $current_lock = $transaction->getLockDate();
         if ($current_lock !== null) {
