@@ -255,6 +255,12 @@ class Pay_Payment_Helper_Data extends Mage_Core_Helper_Abstract
     public function lockTransaction($transactionId)
     {
         $transaction = $this->getTransaction($transactionId);
+
+        if ($transaction->isEmpty()) {
+            Mage::log("{$transactionId} Pay.nl order exchange: Already processed.", Zend_Log::NOTICE, "paynl.log");
+            return false;
+        }
+
         $now = strtotime('now');
         $current_lock = $transaction->getLockDate();
         if ($current_lock !== null) {

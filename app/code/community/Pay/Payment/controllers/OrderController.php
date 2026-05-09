@@ -129,7 +129,11 @@ class Pay_Payment_OrderController extends Mage_Core_Controller_Front_Action
                 die();
             }
 
-            $this->helperData->lockTransaction($transactionId);
+            if ($this->helperData->lockTransaction($transactionId) === false) {
+                echo "TRUE|NOTICE: Already processed";
+                Mage::log("{$transactionId} Pay.nl order exchange: Already processed. Params: {$_SERVER['QUERY_STRING']}", Zend_Log::NOTICE, "paynl.log");
+                die();
+            }
 
             $status = $this->helperOrder->processByTransactionId($transactionId, null, $action);
 
