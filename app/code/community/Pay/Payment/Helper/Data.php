@@ -257,7 +257,8 @@ class Pay_Payment_Helper_Data extends Mage_Core_Helper_Abstract
         $transaction = $this->getTransaction($transactionId);
 
         if ($transaction->isEmpty()) {
-            throw Mage::exception('Pay_Payment', 'No local transaction record found for: ' . $transactionId, 0);
+            Mage::log("{$transactionId} Pay.nl order exchange: Already processed.", Zend_Log::NOTICE, "paynl.log");
+            return false;
         }
 
         $now = strtotime('now');
