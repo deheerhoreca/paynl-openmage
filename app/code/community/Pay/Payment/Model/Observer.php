@@ -15,7 +15,14 @@ class Pay_Payment_Model_Observer extends Mage_Core_Model_Observer
         if (!self::$shouldAdd) {
             return;
         }
-        require_once(dirname(dirname(__FILE__)).'/vendor/autoload.php');
+
+        if (!class_exists('Paynl\\Config')) {
+            $autoloadFile = dirname(dirname(__FILE__)).'/vendor/autoload.php';
+            if (!is_file($autoloadFile)) {
+                throw new RuntimeException('PAY. SDK autoloader is missing: '.$autoloadFile);
+            }
+            require_once $autoloadFile;
+        }
 
         self::$shouldAdd = false;
     }

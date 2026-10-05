@@ -1,12 +1,21 @@
 {
     "name": "paynl/magento-plugin",
     "type": "magento-module",
-    "license":"OSL-3.0",
-    "description":"Add PAY.'s payment methods to your magento store",
-    "authors":[
+    "license": "OSL-3.0",
+    "description": "Add PAY.'s payment methods to your magento store",
+    "authors": [
         {
-            "name":"Andy Pieters",
-            "email":"andy@pay.nl"
+            "name": "Andy Pieters",
+            "email": "andy@pay.nl"
         }
-    ]
+    ],
+    "require": {
+        "paynl/sdk": "^1.6.11"
+    },
+    "scripts": {
+        "test": [
+            "@php tests/parent-autoload.php",
+            "@php tests/legacy-autoload.php"
+        ]
+    }
 }
